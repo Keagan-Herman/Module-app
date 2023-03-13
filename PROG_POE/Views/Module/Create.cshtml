@@ -1,0 +1,64 @@
+﻿@model PROG_POE_ClassLib.Model.StudentModules
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Add</h1>
+
+<h4>Module</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+                <label asp-for="Module_Code" class="control-label"></label>
+                <input asp-for="Module_Code" class="form-control" />
+                <span asp-validation-for="Module_Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Module_Name" class="control-label"></label>
+                <input asp-for="Module_Name" class="form-control" />
+                <span asp-validation-for="Module_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Num_Credits" class="control-label"></label>
+                <input asp-for="Num_Credits" class="form-control" />
+                <span asp-validation-for="Num_Credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class_Hours" class="control-label"></label>
+                <input asp-for="Class_Hours" class="form-control" />
+                <span asp-validation-for="Class_Hours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Start_Date" class="control-label"></label>
+                <input asp-for="Start_Date" class="form-control" />
+                <span asp-validation-for="Start_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Semester_Weeks" class="control-label"></label>
+                <input asp-for="Semester_Weeks" class="form-control" />
+                <span asp-validation-for="Semester_Weeks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hours_Studied" class="control-label"></label>
+                <input asp-for="Hours_Studied" class="form-control" />
+                <span asp-validation-for="Hours_Studied" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add module" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

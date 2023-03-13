@@ -1,0 +1,159 @@
+﻿@page  "{id:int}"
+@model PROG_POE.Pages.EditModuleModel
+
+
+<form method="post">
+    <input asp-for="studentModules.Student_Id" type="hidden" />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3"> Edit Module</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                @*Module Code*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Module_Code"></label>
+                    </div>
+                    <div class="col-8">
+
+                        <input asp-for="studentModules.Module_Code" class="form-control" />
+                        <span asp-validation-for="studentModules.Module_Code" class="text-danger"></span>
+                    </div>
+                </div>
+                @*end*@
+
+                @*Module Name*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Module_Name"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Module_Name" class="form-control" />
+                        <span asp-validation-for="studentModules.Module_Name" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+                @*Credits*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Num_Credits"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Num_Credits" class="form-control" />
+                        <span asp-validation-for="studentModules.Num_Credits" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+                @*Class Hours Per Week*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Class_Hours"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Class_Hours" class="form-control" />
+                        <span asp-validation-for="studentModules.Class_Hours" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+                @*Start Date*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Start_Date"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Start_Date" class="form-control" />
+                        <span asp-validation-for="studentModules.Start_Date" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+
+                @*Semester Week*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Semester_Weeks"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Semester_Weeks" class="form-control" />
+                        <span asp-validation-for="studentModules.Semester_Weeks" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+
+                @*Date Studied*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Date_Studied"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Date_Studied" class="form-control" />
+                        <span asp-validation-for="studentModules.Date_Studied" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+                @*Hours Worked**@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="studentModules.Hours_Studied"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="studentModules.Hours_Studied" class="form-control" />
+                        <span asp-validation-for="studentModules.Hours_Studied" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row p-4">
+
+                        <div class="col">
+                            @*CREATE BUTTON*@
+                            <input type="submit" class="btn btn-info w-100" value="Update" />
+                        </div>
+                        <div class="col">
+                            @*BACK LINK*@
+                            <a class="btn btn-success w-100" href="/Modules">
+                                <i class="fas fa-sign-out-alt"></i> &nbsp; BACK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+               
+            </div>
+        </div>
+
+
+    </div>
+</form>
+
+@*Validation for client side*@
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
